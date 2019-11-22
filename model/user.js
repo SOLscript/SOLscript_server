@@ -5,12 +5,9 @@ var Schema = mongoose.Schema
 // })
 
 var userSchema = new Schema({
-    email: String,
-    // fbToken: String,
-    sns: String,
-    name: String,
+    subList: Array,
+    usage: Array,
     
-    jsonWebToken: String
 },{ versionKey: '_somethingElse' })
 
 

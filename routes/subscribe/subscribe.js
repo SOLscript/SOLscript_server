@@ -29,7 +29,7 @@ router.get('/:category', (req, res) => {
 router.get('/', (req, res) => {
     const word = req.query.word
 
-    post.find({ $or: [ {'title': {'$regex': word, '$options': 'i'}},{'subTitle': {'$regex': word, '$options': 'i'}}]})
+    post.find({$text: {$search: word}},{score:{$meta: "textScore"}}).sort({score:{$meta:"textScore"}})
         .then((result) => {
             res.status(200).json({
                 message: "success",
@@ -38,19 +38,6 @@ router.get('/', (req, res) => {
                 }
             })
         })
-        .catch((err) => {
-
-        })
-
-    // post.find({$text: {$search: word}},{score:{$meta: "textScore"}}).sort({score:{$meta:"textScore"}})
-    //     .then((result) => {
-    //         res.status(200).json({
-    //             message: "success",
-    //             data: {
-    //                 subData:result
-    //             }
-    //         })
-    //     })
 
 })
 
