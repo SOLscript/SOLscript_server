@@ -25,6 +25,7 @@ router.post('/', (req, res) => {
                                 result.usage.push() // push를 해야만 데이터 저장이됨.. 이상함.
                             }
                         })
+                        
                         if (count == 0) {
                             result.usage.push(
                                 {
