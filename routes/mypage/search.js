@@ -56,6 +56,8 @@ var test = [
         if (mo[1] == month) {
             money += e.price
             if (arr[0] == undefined) {
+                console.log("ee1")
+
                 arr.push(
                     {
                         date: `2019-${month}-${mo[2]}`,
