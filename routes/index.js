@@ -18,7 +18,8 @@ router.use('/mypage',require('./mypage/index'))
 router.use('/search',require('./search/search'))
 router.use('/detail',require('./detail/detail'))
 router.use('/sub',require('./subscribe/subscribe'))
-    
+router.use('/regist/shinhanCard', require('./regist/shinhanCard'))
+
 
 router.post('/posts',(req,res) => {
     

@@ -8,16 +8,14 @@
 	"dataBody":{
 		"nxtQyKey":"",
 		"grp001":[
-			{"useFeeInt":"0000000000000","useAmt1":"0000000004500","ppDssumCCd":"11","svePntRt":"00050","rcpMnt":"0000","useMchtNm":"올레 쇼핑 구독","dvdMnth":"000","slsAmt":"5000", "useD":"20190607","useCrdC":"본인314"},
-            {"useFeeInt":"0000000000000","useAmt1":"0000000031950","ppDssumCCd":"11","svePntRt":"00050","rcpMnt":"0000","useMchtNm":"하루야채 매일 서비스 구독","dvdMnth":"000","slsAmt":"10000","useD":"20190614","useCrdC":"본인314"},
 			{"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"LG U+ 구독","dvdMnth":"000","slsAmt":"25000","useD":"20190614","useCrdC":"본인314"},
-			{"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Youtube 구독","dvdMnth":"000","slsAmt":"35000","useD":"20190615","useCrdC":"본인314"},
+            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Youtube 구독","dvdMnth":"000","slsAmt":"35000","useD":"20190615","useCrdC":"본인314"},
 			{"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"NAVER Cloud 구독","dvdMnth":"000","slsAmt":"22300","useD":"20190617","useCrdC":"본인314"},
 			{"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Google Cloud 구독","dvdMnth":"000","slsAmt":"24050","useD":"20190618","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"풀무원 구독","dvdMnth":"000","slsAmt":"15000","useD":"20190645","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"멜론 구독","dvdMnth":"000","slsAmt":"3000","useD":"20190702","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Vive 구독","dvdMnth":"000","slsAmt":"22000","useD":"20190709","useCrdC":"본인314"},
-            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Adobe 구독","dvdMnth":"000","slsAmt":"22000","useD":"20190714","useCrdC":"본인314"},
+            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Creative Cloud 구독","dvdMnth":"000","slsAmt":"22000","useD":"20190714","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"Jetbrains 구독","dvdMnth":"000","slsAmt":"122000","useD":"20190716","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"리디북스 구독","dvdMnth":"000","slsAmt":"35000","useD":"20190718","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"밀리의 서재 구독","dvdMnth":"000","slsAmt":"45000","useD":"20190814","useCrdC":"본인314"},
@@ -27,11 +25,8 @@
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"무릉외갓집 구독","dvdMnth":"000","slsAmt":"2000","useD":"20190917","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"술담화 구독","dvdMnth":"000","slsAmt":"35000","useD":"20190919","useCrdC":"본인314"},
             {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"차차 구독","dvdMnth":"000","slsAmt":"65000","useD":"20191012","useCrdC":"본인314"},
-            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"노블메이드 구독","dvdMnth":"000","slsAmt":"25000","useD":"20191014","useCrdC":"본인314"}
-			
-			
-			
-			
+            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"노블메이드 구독","dvdMnth":"000","slsAmt":"25000","useD":"20191014","useCrdC":"본인314"},
+            {"useFeeInt":"0000000000000","useAmt1":"0000000031950","ppDssumCCd":"11","svePntRt":"00050","rcpMnt":"0000","useMchtNm":"하루야채 매일 서비스 구독","dvdMnth":"000","slsAmt":"10000","useD":"20190614","useCrdC":"본인314"}	
         ]
 	}
 }
