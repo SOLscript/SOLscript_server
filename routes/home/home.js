@@ -120,9 +120,26 @@ router.get('/total', (req, res) => {
 
 router.get('/usage', (req, res) => {
 
+
+    
+    arr = []
     user.findOne()
         .then((use) => {
-            console.log(use.usage[0].name)
+            use.usage.forEach(n => {
+                arr.push({
+                    title: n.name,
+                    image: n.image,
+                    price: n.price,
+                    type: n.type,
+                    score:  Math.floor(((n.time["11"] - n.time["10"])/(n.time["10"]))*100)
+                })
+            })
+            res.json({
+                message:"success",
+                data:{
+                    usage: arr
+                }
+            })
         })
 })
 
