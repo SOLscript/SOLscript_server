@@ -26,15 +26,17 @@ router.post('/bank', async(req, res) => {
     const account = req.body.account;
     
     let result = await shinhanBank.usageDetail(account);
-    user.find()
-        .then((person) => {
-            pserson.subList = result
-            person.save()
-                .then((re) => {
-                    console.log(result);
-                    res.json(result);
-                })
-        })
+        try {
+        let person = await user.findOne();
+        person.subList = result;
+        let re = await person.save()
+
+        console.log(re);
+        res.json(re);
+
+    } catch (err) {
+        console.log(`err: ${err}`);
+    }
 })
 
 
