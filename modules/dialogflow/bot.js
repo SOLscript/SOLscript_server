@@ -29,7 +29,8 @@ class Dialogflow {
         // Create a new session
         const sessionClient = new dialogflow.SessionsClient();
         // session path
-        const sessionId = uuid.v4();
+        // const sessionId = uuid.v4();
+        const sessionId = "sessionyunzaizangzang";
         const sessionPath = sessionClient.sessionPath(this.projectId, sessionId);
 
         // query request

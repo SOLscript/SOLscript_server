@@ -4,6 +4,7 @@ var post = require('../model/post')
 var user = require('../model/user')
 
 
+router.use('/', require('./regist'))
 router.use('/', require('./dialogflow'))
 router.use('/mypage',require('./mypage/index'))
 router.use('/search',require('./search/search'))

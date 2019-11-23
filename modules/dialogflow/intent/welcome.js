@@ -1,7 +1,7 @@
-const user = require('../../model/user');
+const user = require('../../../model/user');
 
 
-const welcome = async (agent) => {
+module.exports = async (agent) => {
     let params = agent.request_.body.queryResult.parameters;
 
     // let feel = params.Feel;
