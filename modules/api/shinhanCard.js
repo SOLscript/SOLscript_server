@@ -30,6 +30,9 @@ const extractSubscript = (stores) => {
                     }
                     result.push(inputData);
                 })
+                .catch((err)=> {
+                    
+                })
         }
     })
     

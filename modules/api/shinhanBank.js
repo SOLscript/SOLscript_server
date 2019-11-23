@@ -16,7 +16,7 @@ const extractSubscript = (stores) => {
    
         if (data.slice(-1) == '구독') {
             let inputTitle = data.slice(0, -1).join().replaceAll(',', ' ');
-            post.findOne({title:title})
+            post.findOne({title:inputTitle})
                 .then((result) => {
                     let inputData = {
                         title: inputTitle,
@@ -25,6 +25,9 @@ const extractSubscript = (stores) => {
                         post_id: result._id
                     }
                     result.push(inputData);
+                })
+                .catch((err)=> {
+
                 })
             // let inputData = {
             //     title: inputTitle,

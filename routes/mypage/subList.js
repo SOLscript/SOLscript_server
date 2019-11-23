@@ -17,9 +17,8 @@ router.post('/card', async (req, res) => {
             person.save()
                 .then((re) => {
                     console.log(result);
-                    res.json(result);
-                   
-                })
+                    res.json(result);            
+            })
         })
 });
 
