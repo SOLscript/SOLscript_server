@@ -24,5 +24,25 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/count', (req, res) => {
+    post.find({like:true})
+        .then((result) => {
+            const count = result.length
+            res.json({
+                message:"success",
+                data:{
+                    likeCount : count
+                }
+            })
+        })
+        .catch((err) => {
+            res.status(500).json({
+                message:"server err",
+                data:{
+
+                }
+            })
+        })
+})
 
 module.exports = router;
