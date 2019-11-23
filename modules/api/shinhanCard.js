@@ -62,15 +62,14 @@ module.exports = {
     // 신용카드 월별 청구 내역 조회
     usageDetail: async (nxtQyKey) => {
         option = {
-            uri: 'http://10.3.17.61:8081/v1/authorizations/visaansimclickcardforapplycard',
+            uri: 'http://10.3.17.61:8080/v1/search/transaction/history',
             method: 'POST',
             body:{
                 "dataHeader":{},
                 "dataBody":{
-                    "cardNoEnc": "9986D78CABB0F61D4D0DC7C2ED1633D90B65906B4FFFA403656225BBA2050380",
-                    "passwd": "6904MDIwGhMABB%2FENC%2Fq8F%2Ftkqt09eT0IzpnGi%2B0A%3D%3D",
-                    "cvv2": "4132MDIwGhMABB%2FENC%2F3zAfsnPJhUoJTgDGTSS8vQ%3D%3D",
-                    "validTrm": "201808"
+                    "nxtQyKey":"",
+                    "setlDay":"20190722",
+                    "setlTypeNo":"0002"
                 }
             },
             json: true
