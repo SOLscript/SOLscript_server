@@ -5,7 +5,6 @@ var user = require('../../model/user')
 
 /* GET users listing. */
 router.get('/', (req, res) => {
-    
     post.find({like:true})
         .then((result) => {
             res.json({

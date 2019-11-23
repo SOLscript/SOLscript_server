@@ -15,12 +15,18 @@ const upload = require('../config/multer');
 
 var cpUpload = upload.fields([{name:"th",maxCount:1},{name:'images',maxCount:8}])
 
-
 router.use('/', require('./dialogflow'))
 router.use('/mypage',require('./mypage/index'))
 router.use('/search',require('./search/search'))
 router.use('/detail',require('./detail/detail'))
 router.use('/sub',require('./subscribe/subscribe'))
+router.use('/recognize',require('./recognize/recognize'))
+
+router.get('/',(req,res) => {
+    res.json({
+        message:"환영합니다."
+    })
+})
 
 router.post('/',upload.array('images'),(req,res) => {
     const imageArr = req.files
@@ -33,11 +39,12 @@ router.post('/',upload.array('images'),(req,res) => {
         arr.push(n.location)
     })
 
-    const {title, subTitle, content, type, category, price, likeCount} = req.body
+    const {title, feat, subTitle, content, type, category, price, likeCount} = req.body
     var posts = new post()
     posts.image = thumb.location
     posts.title = title
     posts.subTitle = subTitle 
+    posts.feat = feat
     // posts.images = arr
     posts.content = content
     posts.category = category

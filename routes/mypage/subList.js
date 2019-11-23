@@ -34,7 +34,6 @@ router.post('/bank', async(req, res) => {
                 .then((re) => {
                     console.log(result);
                     res.json(result);
-                   
                 })
         })
 })

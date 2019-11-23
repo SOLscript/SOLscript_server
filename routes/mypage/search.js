@@ -47,48 +47,75 @@ var test = [
 ]
 
 router.get('/calender/:month', (req, res) => {
-
     const month = req.params.month
     // const date = req.query.date
     money = 0
     var arr = []
-    test.forEach((e) => {
-        var mo = e.date.split('-')
-        if (mo[1] == month) {
-            money += e.price
-            if (arr[0] == undefined) {
-                console.log("ee1")
-                arr.push(
-                    {
-                        date: `2019-${month}-${mo[2]}`,
-                        subList: [e]
-                    }
-                    )
-            } else {
-                arr.some((n) => {
-                    console.log(e.date)
-                    if (n.date == e.date){
-                        console.log("얄루")
-                        n.subList.unshift(e)
-                        return true
-                    } else{
-                        arr.unshift(
-                            {
-                                date: `2019-${month}-${mo[2]}`,
-                                subList: [e]
-                            })
-                       return true 
-                    }
-                })
-            }
-        }
-    })
 
-    res.json({
-        message:arr,
-        totalMoney : money
-    })
-
+    user.findOne({}).sort({date:1})
+        .then((result) => {
+            result.subList.forEach((e) => {
+                console.log(e)
+                var mo = e.date.split('-')
+                if (mo[1] == month) {
+                    money += e.price
+                    post.findOne({_id:e._id})
+                        .then((output) => {
+                            if (arr[0] == undefined) {
+                                console.log("ee1")
+                                arr.push(
+                                    {
+                                        date: `2019-${month}-${mo[2]}`,
+                                        subList: [
+                                            {
+                                               title: output.title,
+                                               price: output.price,
+                                                type: output.type,
+                                                image: output.image,
+                                                date: e.date
+                                            }
+                                        ]
+                                    }
+                                    )
+                            } else {
+                                arr.some((n) => {
+                                    console.log(e.date)
+                                    if (n.date == e.date){
+                                        console.log("얄루")
+                                        n.subList.unshift({
+                                            title: output.title,
+                                            price: output.price,
+                                             type: output.type,
+                                             image: output.image,
+                                             date: e.date
+                                         })
+                                        return true
+                                    } else{
+                                        arr.unshift(
+                                            {
+                                                date: `2019-${month}-${mo[2]}`,
+                                                subList: [{
+                                                    title: output.title,
+                                                    price: output.price,
+                                                     type: output.type,
+                                                     image: output.image,
+                                                     date: e.date
+                                                 }]
+                                            })
+                                       return true 
+                                    }
+                                })
+                            }
+                        })
+                    
+                }
+            })
+        
+            res.json({
+                message:arr,
+                totalMoney : money
+            })
+        })
     // user.find({}).sort({date:1})
     //     .then((result) => {
             
@@ -114,60 +141,44 @@ router.get('/cost/:month', (req, res) => {
 
     totalPrice = 0
     var arr = []
-    test.forEach((e) => {
-        totalPrice += e.price
-        if (arr[0] == undefined) {
-            arr.push(
-                    {
-                        category: e.category,
-                        price: e.price
+
+    user.find({}).sort({date:1})
+        .then((result) => {
+            result.subList.forEach((e) => {
+                totalPrice += e.price
+                if (arr[0] == undefined) {
+                    arr.push(
+                            {
+                                category: e.category,
+                                price: e.price
+                            }
+                        )
+                } else {
+                    count = 0
+                    arr.some((n) => {
+                        if (n.category == e.category){
+                            n.price += e.price
+                            count += 1
+                            return true
+                        }else{
+                        }
+                    })
+                    if (count == 0) {
+                        arr.push(
+                            {
+                                category: e.category,
+                                price: e.price
+                            }
+                        )
                     }
-                )
-        } else {
-            count = 0
-            arr.some((n) => {
-                if (n.category == e.category){
-                    n.price += e.price
-                    count += 1
-                    return true
-                }else{
                 }
             })
-            if (count == 0) {
-                arr.push(
-                    {
-                        category: e.category,
-                        price: e.price
-                    }
-                )
-            }
-        }
-    })
-
-    res.json({
-        message:arr,
-        totalPrice : totalPrice
-    })
-
-    // user.find({}).sort({date:1})
-    //     .then((result) => {
-            
-    //         result.subList.forEach(e => {
-    //             let mo =  e.date.split('-')
-    //             if (mo[1] == month) {
-    //                 money += e.price
-                    
-    //             } 
-
-    //         });
-
-    //         res.json({
-    //             message:"success",
-    //             data:{
-
-    //             }
-    //         })
-    //     })
+        
+            res.json({
+                message:arr,
+                totalPrice : totalPrice
+            })
+        })
 })
 
 

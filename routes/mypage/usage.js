@@ -30,10 +30,10 @@ router.post('/', (req, res) => {
                         {
                             "name":key2,
                             "time":{
-                                "7":0,
-                                "8":0,
-                                "9":0,
-                                "10":0,
+                                "7":getRandomInt(200, 800),
+                                "8":getRandomInt(102, 1002),
+                                "9":getRandomInt(302, 2131),
+                                "10":getRandomInt(142, 1124),
                                 "11":screenTime[key2]
                             }
                         }
@@ -58,6 +58,10 @@ router.post('/', (req, res) => {
         })
   
 })
-
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+  }
 
 module.exports = router;
