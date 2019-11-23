@@ -1,29 +1,20 @@
-var express = require('express');
-var router = express.Router();
-var post = require('../../model/post')
-var user = require('../../model/user')
+const express = require('express');
+const router = express.Router();
+const shinhanCard = require('../../modules/api/shinhanCard');
+const shinhanBank = require('../../modules/api/shinhanBank');
 
-/* GET users listing. */
-router.get('/', (req, res) => {
+
+router.post('/', async (req, res) => {
+    const nxtQyKey = req.body.nxtQyKey;
+    let result = await shinhanCard.usageDetail(nxtQyKey);
+    // let result = await shinhanBank.usageDetail();
+
+    console.log(result);
+    res.json(result);
     
-    post.find({like:true})
-        .then((result) => {
-            res.json({
-                message:"success",
-                data:{
-                    subData: result
-                }
-            })
-        })
-        .catch((err) => {
-            res.status(500).json({
-                message:"server err",
-                data:{
-
-                }
-            })
-        })
-})
+});
 
 
 module.exports = router;
+
+
