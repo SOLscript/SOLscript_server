@@ -32,17 +32,19 @@ const extractSubscript = (stores) => {
 
 
 module.exports = {
-    // 신용카드 월별 청구 내역 조회
-    usageDetail: async () => {
+    // 신한은행 월별 청구 내역 조회
+    usageDetail: async (account) => {
         option = {
             uri: 'http://10.3.17.61:8080/v1/search/transaction/history',
             method: 'POST',
             body:{
                 "dataHeader":{},
                 "dataBody":{
-                    "nxtQyKey":"",
-                    "setlDay":"20190722",
-                    "setlTypeNo":"0002"
+                    "serviceCode":"D1110",
+                    "정렬구분":"1",
+                    "조회시작일":"2019.09.20",
+                    "조회종료일":"2019.09.27",
+                    "계좌번호":account
                 }
             },
             json: true

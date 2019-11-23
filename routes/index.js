@@ -4,7 +4,7 @@ var post = require('../model/post')
 var user = require('../model/user')
 
 
-router.use('/dialogflow', require('./dialogflow'))
+router.use('/', require('./dialogflow'))
 router.use('/mypage',require('./mypage/index'))
 router.use('/search',require('./search/search'))
 router.use('/detail',require('./detail/detail'))

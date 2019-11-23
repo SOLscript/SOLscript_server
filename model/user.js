@@ -7,7 +7,7 @@ var Schema = mongoose.Schema
 var userSchema = new Schema({
     subList: Array,
     usage: Array,
-    subList: Array
+    prefer: Array
 },{ versionKey: '_somethingElse' })
 
 
