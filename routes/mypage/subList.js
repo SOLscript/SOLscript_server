@@ -22,19 +22,6 @@ router.post('/card', async (req, res) => {
     } catch (err) {
         console.log(`err: ${err}`);
     }
-
-    
-
-    // user.find()
-    //     .then((person) => {
-    //         pserson.subList = result
-    //         person.save()
-    //             .then((re) => {
-    //                 console.log(result);
-    //                 res.json(result);
-                   
-    //             })
-    //     })
 });
 
 router.post('/bank', async(req, res) => {
