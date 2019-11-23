@@ -19,15 +19,13 @@ router.post('/', (req, res) => {
                         result.usage.forEach(e => {
                             if (e.name === key2) {
                                 var mm = (today.getMonth()+1).toString()
-                                
-                                result.usage[co].time[mm] = (result.usage[co].time[mm] + screenTime[key2])
+                                console.log(result.usage[co])
+                                result.usage[co].time[mm] = result.usage[co].time[mm] + screenTime[key2]
                                 count +=1    
                                 result.usage.push() // push를 해야만 데이터 저장이됨.. 이상함.
                             }
-                            co+=1
                         })
                         if (count == 0) {
-                            console.log(popo.image)
                             result.usage.push(
                                 {
                                     name:key2,
@@ -43,19 +41,19 @@ router.post('/', (req, res) => {
                                     }
                                 }
                             )
-                            
                         }
-                    })
-            }
-            var arr =  JSON.parse(JSON.stringify(result.usage))
-            result.usage = arr
-            console.log(result)
             result.save()
                 .then((re) => {
                     res.json({
                         message:re.usage
-                    })
+                })
             })
+        })
+            }
+
+            var arr =  JSON.parse(JSON.stringify(result.usage))
+            result.usage = arr
+            
         })
         .catch((err) => {
             res.status(500).json({
