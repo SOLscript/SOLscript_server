@@ -53,7 +53,6 @@ router.get('/calender/:month', (req, res) => {
     money = 0
     var arr = []
     test.forEach((e) => {
-        console.log("ee")
         var mo = e.date.split('-')
         if (mo[1] == month) {
             money += e.price
