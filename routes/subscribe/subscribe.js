@@ -62,6 +62,9 @@ router.get('/:category', (req, res) => {
 
 router.get('/', (req, res) => {
     const word = req.query.word
+
+
+    
     post.find({}).sort({date:1})
         .then()
 

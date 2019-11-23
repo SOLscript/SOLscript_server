@@ -16,7 +16,7 @@ router.post('/', (req, res) => {
                 var count = 0
                 var co = 0
                 result.usage.forEach(e => {
-                    if(e.name === key2){
+                    if (e.name === key2) {
                         var mm = (today.getMonth()+1).toString()
                         
                         result.usage[co].time[mm] = (result.usage[co].time[mm] + screenTime[key2])
@@ -25,7 +25,7 @@ router.post('/', (req, res) => {
                     }
                     co+=1
                 })
-                if (count == 0){
+                if (count == 0) {
                     result.usage.push(
                         {
                             "name":key2,
@@ -56,8 +56,6 @@ router.post('/', (req, res) => {
                 message: err
             })
         })
-  
-    
   
 })
 

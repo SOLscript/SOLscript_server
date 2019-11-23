@@ -6,45 +6,47 @@ var user = require('../../model/user')
 /* GET users listing. */
 // 캘린더 캘린더
 
-
-
-router.get('/calender/:month', (req, res) => {
-
 var test = [
     {
         title:"you",
         category:"music",
         price: 4003,
+        type:"month",
         date: "2019-11-03"
     },
     {
         title:"you1",
         category:"music",
         price: 4003,
+        type:"month",
         date: "2019-11-03"
     },
     {
         title:"you2",
-        category:"music",
+        category:"etc",
         price: 4003,
+        type:"month",
         date: "2019-11-05"
     },
     {
         title:"you3",
-        category:"music",
+        category:"digital",
         price: 4003,
+        type:"month",
+
         date: "2019-11-05"
     },
     {
         title:"you4",
         category:"music",
         price: 4003,
+        type:"month",
+
         date: "2019-11-07"
     }
 ]
-    test.forEach((n) => {
-        console.log(n)
-    })
+
+router.get('/calender/:month', (req, res) => {
 
     const month = req.params.month
     // const date = req.query.date
@@ -57,7 +59,6 @@ var test = [
             money += e.price
             if (arr[0] == undefined) {
                 console.log("ee1")
-
                 arr.push(
                     {
                         date: `2019-${month}-${mo[2]}`,
@@ -69,15 +70,15 @@ var test = [
                     console.log(e.date)
                     if (n.date == e.date){
                         console.log("얄루")
-                        n.subList.push(e)
+                        n.subList.unshift(e)
                         return true
                     } else{
-                        arr.push(
+                        arr.unshift(
                             {
                                 date: `2019-${month}-${mo[2]}`,
                                 subList: [e]
                             })
-                       return false 
+                       return true 
                     }
                 })
             }
@@ -85,7 +86,8 @@ var test = [
     })
 
     res.json({
-        message:arr
+        message:arr,
+        totalMoney : money
     })
 
     // user.find({}).sort({date:1})
@@ -109,27 +111,64 @@ var test = [
     //     })
 })
 
-router.get('/search', (req, res) => {
+router.get('/cost/:month', (req, res) => {
 
-    const date = req.query.date
-
-    post.find({date:date})
-        .then((result) => {
-            res.json({
-                message:"success",
-                data:{
-                    subData: result
+    totalPrice = 0
+    var arr = []
+    test.forEach((e) => {
+        totalPrice += e.price
+        if (arr[0] == undefined) {
+            arr.push(
+                    {
+                        category: e.category,
+                        price: e.price
+                    }
+                )
+        } else {
+            count = 0
+            arr.some((n) => {
+                if (n.category == e.category){
+                    n.price += e.price
+                    count += 1
+                    return true
+                }else{
                 }
             })
-        })
-        .catch((err) => {
-            res.status(500).json({
-                message:"server err",
-                data:{
+            if (count == 0) {
+                arr.push(
+                    {
+                        category: e.category,
+                        price: e.price
+                    }
+                )
+            }
+        }
+    })
 
-                }
-            })
-        })
+    res.json({
+        message:arr,
+        totalPrice : totalPrice
+    })
+
+    // user.find({}).sort({date:1})
+    //     .then((result) => {
+            
+    //         result.subList.forEach(e => {
+    //             let mo =  e.date.split('-')
+    //             if (mo[1] == month) {
+    //                 money += e.price
+                    
+    //             } 
+
+    //         });
+
+    //         res.json({
+    //             message:"success",
+    //             data:{
+
+    //             }
+    //         })
+    //     })
 })
 
 
