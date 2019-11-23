@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
                         
                         result.usage[co].time[mm] = (result.usage[co].time[mm] + screenTime[key2])
                         count +=1    
-                        result.usage.push()
+                        result.usage.push() // push를 해야만 데이터 저장이됨.. 이상함.
                     }
                     co+=1
                 })

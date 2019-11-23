@@ -18,7 +18,8 @@ db.on('error', console.error);
 db.once('open', function(){
     console.log("Connected to mongod server");
 });
-mongoose.connect('mongodb+srv://modak:'+''+'@modoc-mqsht.mongodb.net/sol?retryWrites=true&w=majority', {useUnifiedTopology: true , useNewUrlParser: true, 
+
+mongoose.connect('mongodb+srv://modak:'+'ehdgns2797'+'@modoc-mqsht.mongodb.net/sol?retryWrites=true&w=majority', {useUnifiedTopology: true , useNewUrlParser: true, 
     useCreateIndex: true,
     useNewUrlParser: true
 });

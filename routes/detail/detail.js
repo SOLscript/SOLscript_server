@@ -39,7 +39,6 @@ router.get('/like/:id', (req, res) => {
                 result.like = true
                 result.save()
             }
-
             res.json({
                 message:"success",
                 data:{
