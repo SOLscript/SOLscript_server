@@ -1,5 +1,7 @@
 const request = require('request-promise');
 const data = require('./cardData.json');
+const post = require('../../model/post')
+const user = require('../../model/user')
 
 
 String.prototype.replaceAll = function(org, dest) {
@@ -12,16 +14,22 @@ const extractSubscript = (stores) => {
 
     stores.forEach(store => {
         let data = store.useMchtNm.split(' ');
-   
+    
         if (data.slice(-1) == '구독') {
             let inputTitle = data.slice(0, -1).join().replaceAll(',', ' ');
             
-            let inputData = {
-                title: inputTitle,
-                date: 0000,
-                cost: store.useD
-            }
-            result.push(inputData);
+            post.findOne({title:title})
+                .then((result) => {
+                    let inputData = {
+                        title: inputTitle,
+                        date: 0000, // 구독 날짜
+                        cost: store.useD,
+                        post_id : result._id
+                    }
+                    result.push(inputData);
+                })
+
+            
         }
     })
     

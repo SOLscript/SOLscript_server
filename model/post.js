@@ -5,14 +5,16 @@ var Schema = mongoose.Schema
 // })
 
 var postSchema = new Schema({
-    title: {type:String, index:"text"},
-    subTitle: {type:String, index:"text"},
-    image: String,
-    category: String,
-    price : Number,
-    like : Boolean,
-    likeCount : Number,
-    images : Array
+    title: {type:String, index:"text"}, // 구독 상품명
+    subTitle: {type:String, index:"text"}, // 구독 짧은 설명
+    image: String, // 로고 
+    type: String, // 월정액인지
+    content: String,
+    category: String, // 카테고리
+    price : Number, // 가격
+    like : {type:Boolean,default:false}, // 좋아요 눌렀는지
+    likeCount : Number, // 좋아요 수
+    images : Array // 이미지들
 },{ versionKey: '_somethingElse' })
 
 
