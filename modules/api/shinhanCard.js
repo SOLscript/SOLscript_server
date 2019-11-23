@@ -21,12 +21,12 @@ const extractSubscript = (stores) => {
             
             
             post.findOne({title:inputTitle})
-                .then((result) => {
+                .then((findUser) => {
                     let inputData = {
                         title: inputTitle,
                         date: store.useD, // 구독 날짜
                         cost: store.slsAmt,
-                        post_id : result._id
+                        post_id : findUser._id
                     }
                     result.push(inputData);
                 })

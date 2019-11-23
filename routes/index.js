@@ -16,6 +16,7 @@ const upload = require('../config/multer');
 var cpUpload = upload.fields([{name:"th",maxCount:1},{name:'images',maxCount:8}])
 
 router.use('/', require('./dialogflow'))
+router.use('/regist/shinhanCard', require('./regist/shinhanCard'))
 router.use('/mypage',require('./mypage/index'))
 router.use('/search',require('./search/search'))
 router.use('/detail',require('./detail/detail'))

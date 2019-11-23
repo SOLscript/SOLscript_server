@@ -11,15 +11,17 @@ router.post('/card', async (req, res) => {
     const nxtQyKey = req.body.nxtQyKey;
     let result = await shinhanCard.usageDetail(nxtQyKey);
     
-    user.find()
-        .then((person) => {
-            pserson.subList = result
-            person.save()
-                .then((re) => {
-                    console.log(result);
-                    res.json(result);            
-            })
-        })
+    try {
+        let person = await user.findOne();
+        person.subList = result;
+        let re = await person.save()
+
+        console.log(re);
+        res.json(re);
+
+    } catch (err) {
+        console.log(`err: ${err}`);
+    }
 });
 
 router.post('/bank', async(req, res) => {
