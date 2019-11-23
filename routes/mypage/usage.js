@@ -5,27 +5,25 @@ var user = require('../../model/user')
 
 /* GET users listing. */
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
 
     var today = new Date();
     const screenTime = req.body.screenTime // {"titi":232, "tiie":23}
     user.findOne()
-        .then((result) => {
+        .then(async (result) => {
             for(key2 in screenTime) {
                 var count = 0
                 var co = 0
                 post.findOne({title:key2})
-                    .then((popo) => {
+                    .then(async (popo) => {
                         result.usage.forEach(e => {
                             if (e.name === key2) {
                                 var mm = (today.getMonth()+1).toString()
-                                console.log(result.usage[co])
                                 result.usage[co].time[mm] = result.usage[co].time[mm] + screenTime[key2]
                                 count +=1    
                                 result.usage.push() // push를 해야만 데이터 저장이됨.. 이상함.
                             }
                         })
-                        
                         if (count == 0) {
                             result.usage.push(
                                 {
@@ -42,19 +40,17 @@ router.post('/', (req, res) => {
                                     }
                                 }
                             )
-                        }
-            result.save()
-                .then((re) => {
-                    res.json({
-                        message:re.usage
-                })
+                }           
             })
-        })
             }
+            await result.save()
 
-            var arr =  JSON.parse(JSON.stringify(result.usage))
-            result.usage = arr
+            return result.usage
             
+        }).then((re) =>{
+            res.json({
+                message:re
+             })
         })
         .catch((err) => {
             res.status(500).json({

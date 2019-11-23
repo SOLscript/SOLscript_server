@@ -210,6 +210,7 @@ var test = [
 ]
 
 router.get('/calender/:month', (req, res) => {
+    
     const month = req.params.month
     // const date = req.query.date
     money = 0
@@ -226,7 +227,7 @@ router.get('/calender/:month', (req, res) => {
                             date: `2019-${month}-${mo[2]}`,
                             subList: [e]
                         }
-                        )
+                    )
                 } else {
                     arr.some((n) => {
                         console.log(e.date)
@@ -245,22 +246,29 @@ router.get('/calender/:month', (req, res) => {
                     })
                 }
             }
-            
+        })
+        res.json({
+            message:arr,
+            totalMoney : money
+        })
+    })
     // user.findOne({}).sort({date:1})
     //     .then((result) => {
     //         result.subList.forEach((e) => {
-    //             console.log(e)
-    //             var mo = e.date.split('-')
-    //             if (mo[1] == month) {
-    //                 money += e.price
-    //                 post.findOne({_id:e._id})
+    //             moth = e.date.slice(4,6)
+    //             day = e.date.slice(6,8)
+    //             console.log(moth)
+    //             if (moth == "06") {
+    //                 money +=  parseInt(e.cost)
+    //                 post.findOne({_id:e.post_id})
     //                     .then((output) => {
+    //                         console.log(output)
     //                         if (arr[0] == undefined) {
-    //                             console.log("ee1")
     //                             arr.push(
     //                                 {
-    //                                     date: `2019-${month}-${mo[2]}`,
-    //                                     subList: [
+    //                                     date: `2019-06-${day}`,
+    //                                     subList: 
+    //                                     [ 
     //                                         {
     //                                            title: output.title,
     //                                            price: output.price,
@@ -270,10 +278,9 @@ router.get('/calender/:month', (req, res) => {
     //                                         }
     //                                     ]
     //                                 }
-    //                                 )
+    //                             )
     //                         } else {
     //                             arr.some((n) => {
-    //                                 console.log(e.date)
     //                                 if (n.date == e.date){
     //                                     console.log("얄루")
     //                                     n.subList.unshift({
@@ -287,7 +294,7 @@ router.get('/calender/:month', (req, res) => {
     //                                 } else{
     //                                     arr.unshift(
     //                                         {
-    //                                             date: `2019-${month}-${mo[2]}`,
+    //                                             date: `2019-${month}-${day}`,
     //                                             subList: [{
     //                                                 title: output.title,
     //                                                 price: output.price,
@@ -301,15 +308,12 @@ router.get('/calender/:month', (req, res) => {
     //                             })
     //                         }
     //                     })
-                    
+                        
     //             }
     //         })
-        
-        //     res.json({
-        //         message:arr,
-        //         totalMoney : money
-        //     })
-        // })
+    //         
+            
+    //     })
     // user.find({}).sort({date:1})
     //     .then((result) => {
             
@@ -329,15 +333,11 @@ router.get('/calender/:month', (req, res) => {
     //             }
     //         })
     //     })
-}
 
-
-)
-res.json({
-    message:arr,
-    totalMoney : money
-})
-})
+// res.json({
+//     message:arr,
+//     totalMoney : money
+// })
 
 router.get('/cost/:month', (req, res) => {
 
