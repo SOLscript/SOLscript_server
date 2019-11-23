@@ -1,5 +1,4 @@
 const dialogflow = require('dialogflow');
-const uuid = require('uuid');
 const fs = require('fs');
 
 
@@ -20,17 +19,16 @@ class Dialogflow {
             private_key: privateKey,
             client_email:clientKey
         };
-    };
 
-    async detectTextIntent(queryTxt) {
+    };
+    
+    async detectTextIntent(queryTxt, sessionId) {
         // check queryTxt length
         if (!queryTxt || !queryTxt.length) return "No have message"      
-
-        // Create a new session
-        const sessionClient = new dialogflow.SessionsClient();
+        
         // session path
-        const sessionId = uuid.v4();
-        const sessionPath = sessionClient.sessionPath(this.projectId, sessionId);
+        const sessionClient = new dialogflow.SessionsClient();
+        const sessionPath = await sessionClient.sessionPath(this.projectId, sessionId);
 
         // query request
         const query = {
@@ -51,12 +49,15 @@ class Dialogflow {
             const result = responses[0].queryResult;
             console.log(`  Query: ${result.queryText}`);    // log query
             console.log(`  Response: ${result.fulfillmentText}`);   // log response
+            // console.log(`  SessionId: ${result.outputContexts[0].name}`);;
+            
+            
 
             if (!result.intent) {
                 console.log(`  No intent matched.`);
             }
             console.log(`  Intent: ${result.intent.displayName}`);
-            return result
+            return result.fulfillmentText
 
         
         } catch(err) {

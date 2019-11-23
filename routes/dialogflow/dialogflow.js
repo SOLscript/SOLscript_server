@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs')
+const uuid = require('uuid');
+
 
 const Bot = require('../../modules/dialogflow/bot');
 
@@ -12,15 +14,18 @@ const bot = new Bot(projectid, keyFile);
 
 router.post('/', async (req, res) => {
     const queryTxt = req.body.queryTxt;
-    // const sessionId = req.body.sessionId // 임시
+    const sessionId = req.body.sessionId;
+    // const sessionId = uuid.v4();
 
     try {
-        responses = await bot.detectTextIntent(queryTxt);        
+        responses = await bot.detectTextIntent(queryTxt, sessionId);        
         
     } catch (err) {
         console.log(`dialog err: ${err}`);
         res.send(`dialog err: ${err}`);
     }
+    res.send(responses);
+
 });
 
 module.exports = router;
