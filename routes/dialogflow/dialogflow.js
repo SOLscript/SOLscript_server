@@ -11,7 +11,6 @@ const keyFile =  __dirname + '/../../config/mark-1-259111-3599b21ab557.json';
 
 const bot = new Bot(projectid, keyFile);
 
-
 router.post('/', async (req, res) => {
     const queryTxt = req.body.queryTxt;
     const sessionId = req.body.sessionId;

@@ -2,6 +2,18 @@ var express = require('express');
 var router = express.Router();
 var post = require('../model/post')
 var user = require('../model/user')
+const multer = require('multer')
+var router = express.Router();
+
+const upload = require('../config/multer');
+
+// const upload = multer({ dest: 'uploads/',
+//     onError : function(err, next) {
+//     console.log('error', err);
+//     next(err);
+//   }});
+
+var cpUpload = upload.fields([{name:"th",maxCount:1},{name:'images',maxCount:8}])
 
 
 router.use('/', require('./dialogflow'))
@@ -10,20 +22,48 @@ router.use('/search',require('./search/search'))
 router.use('/detail',require('./detail/detail'))
 router.use('/sub',require('./subscribe/subscribe'))
 
-router.post('/',(req,res) => {
+router.post('/',upload.array('images'),(req,res) => {
+    const imageArr = req.files
+    console.log(imageArr)
+    const thumb = imageArr.shift()
     
-    const {title, subTitle, image,category, price, like, likeCount, images} = req.body
-    var posts = new post()
+    var arr = []
 
+    imageArr.forEach(n => {
+        arr.push(n.location)
+    })
+
+    const {title, subTitle, content, type, category, price, likeCount} = req.body
+    var posts = new post()
+    posts.image = thumb.location
     posts.title = title
     posts.subTitle = subTitle 
-    posts.image = image
+    // posts.images = arr
+    posts.content = content
     posts.category = category
     posts.price = price
-    posts.like = like
+    posts.type = type
     posts.likeCount = likeCount
-    posts.images = images
 
+    posts.save()
+        .then((result) => {
+            res.json({
+                message: result
+            })
+        })
+        .catch((err) => {
+            res.json({
+                message: err
+            })
+        })
+})
+
+router.post('/posts',(req,res) => {
+    
+    const {usage} = req.body
+    var posts = new user()
+
+    posts.usage = usage
     posts.save()
         .then((result) => {
             res.json({

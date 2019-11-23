@@ -16,14 +16,23 @@ const extractSubscript = (stores) => {
    
         if (data.slice(-1) == '구독') {
             let inputTitle = data.slice(0, -1).join().replaceAll(',', ' ');
-
-            let inputData = {
-                title: inputTitle,
-                date: inputDate,
-                cost: store.출금
-            }
-            // console.log(inputData);
-            result.push(inputData);
+            post.findOne({title:title})
+                .then((result) => {
+                    let inputData = {
+                        title: inputTitle,
+                        date: inputDate,
+                        cost: store.출금,
+                        post_id: result._id
+                    }
+                    result.push(inputData);
+                })
+            // let inputData = {
+            //     title: inputTitle,
+            //     date: inputDate,
+            //     cost: store.출금
+            // }
+            // // console.log(inputData);
+            // result.push(inputData);
         }
     })
     
