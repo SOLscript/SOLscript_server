@@ -1,0 +1,16 @@
+{
+	"dataHeader":{
+		"successCode":"0",
+		"resultCode":"0004",
+		"reqKey":null,
+		"resultMessage":"성공적으로 조회 되었습니다."
+	},
+	"dataBody":{
+		"nxtQyKey":"",
+		"grp001":[
+			{"useFeeInt":"0000000000000","useAmt1":"0000000004500","ppDssumCCd":"11","svePntRt":"00050","rcpMnt":"0000","useMchtNm":"올레 쇼핑 구독","dvdMnth":"000","useD":"20190607","useCrdC":"본인314"},
+            {"useFeeInt":"0000000000000","useAmt1":"0000000031950","ppDssumCCd":"11","svePntRt":"00050","rcpMnt":"0000","useMchtNm":"하루야채 매일 서비스 구독","dvdMnth":"000","useD":"20190614","useCrdC":"본인314"},
+            {"useFeeInt":"0000000000000","useAmt1":"0000000027500","ppDssumCCd":"11","svePntRt":"00100","rcpMnt":"0000","useMchtNm":"LG U+ 구독","dvdMnth":"000","useD":"20190614","useCrdC":"본인314"}
+        ]
+	}
+}
