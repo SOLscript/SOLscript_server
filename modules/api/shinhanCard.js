@@ -64,8 +64,6 @@ module.exports = {
             }
         })
         return result
-
-
     },
     // 신용카드 월별 청구 내역 조회
     usageDetail: async (nxtQyKey) => {
@@ -75,7 +73,7 @@ module.exports = {
             body:{
                 "dataHeader":{},
                 "dataBody":{
-                    "nxtQyKey":"",
+                    "nxtQyKey":nxtQyKey,
                     "setlDay":"20190722",
                     "setlTypeNo":"0002"
                 }

@@ -13,7 +13,9 @@ var postSchema = new Schema({
     category: String, // 카테고리
     price : Number, // 가격
     like : {type:Boolean,default:false}, // 좋아요 눌렀는지
-    likeCount : Number, // 좋아요 수
+    likeCount : Number, 
+    feat : String,
+    // 좋아요 수
     images : Array // 이미지들
 },{ versionKey: '_somethingElse' })
 
