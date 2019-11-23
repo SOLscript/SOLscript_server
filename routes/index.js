@@ -84,6 +84,7 @@ router.post('/posts',(req,res) => {
         })
 })
 
+
 router.post('/user',(req,res) => {
     
     const {usage} = req.body
