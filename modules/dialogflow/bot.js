@@ -57,7 +57,13 @@ class Dialogflow {
                 console.log(`  No intent matched.`);
             }
             console.log(`  Intent: ${result.intent.displayName}`);
-            return result.fulfillmentText
+
+            const inputData = {
+                id: "chatbot",
+                response: result.fulfillmentText
+            }
+
+            return inputData
 
         
         } catch(err) {

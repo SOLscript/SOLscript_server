@@ -17,19 +17,19 @@ const extractSubscript = (stores) => {
     
         if (data.slice(-1) == '구독') {
             let inputTitle = data.slice(0, -1).join().replaceAll(',', ' ');
+            console.log(inputTitle);
             
-            post.findOne({title:title})
+            
+            post.findOne({title:inputTitle})
                 .then((result) => {
                     let inputData = {
                         title: inputTitle,
-                        date: 0000, // 구독 날짜
-                        cost: store.useD,
+                        date: store.useD, // 구독 날짜
+                        cost: store.slsAmt,
                         post_id : result._id
                     }
                     result.push(inputData);
                 })
-
-            
         }
     })
     
@@ -70,7 +70,7 @@ module.exports = {
     // 신용카드 월별 청구 내역 조회
     usageDetail: async (nxtQyKey) => {
         option = {
-            uri: 'http://10.3.17.61:8080/v1/search/transaction/history',
+            uri: 'http://10.3.17.61:8081/v1/usecreditcard/searchmonthlybillingdetail',
             method: 'POST',
             body:{
                 "dataHeader":{},
@@ -86,13 +86,13 @@ module.exports = {
         const localResult = await request.post(option, (err, res, body) => {
             try {
                 if (err) console.log(`err: ${err}`)
-                console.log('신한카드 거래내역 API 조회 성공!');                
             } catch (err) {
                 console.log(`err: ${err}`);
             }
             return body
         })
         // local로부터 data를 받아옴.
+        console.log('신한카드 거래내역 API 조회 성공!');               
         let result = extractSubscript(data.dataBody.grp001);
         return result
     }

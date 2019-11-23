@@ -12,9 +12,11 @@ module.exports = async (agent) => {
     prefer = prefer.concat(params.Feel);
     prefer = prefer.concat(params.Category);
     prefer = prefer.concat(params.Price);
+    console.log(prefer);
+    
 
-    let userModel = new user();
-    userModel.prefer.push(prefer);
+    let userModel = await user.findOne()
+    userModel.prefer = prefer;
 
     try {
         addPrefer = await userModel.save();

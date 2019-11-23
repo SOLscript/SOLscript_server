@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
         console.log(`dialog err: ${err}`);
         res.send(`dialog err: ${err}`);
     }
-    res.send(responses);
+    res.json(responses);
 
 });
 
