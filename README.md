@@ -20,7 +20,7 @@
 \
 []()
 # Usage Video
-아래 이미지 클릭
+아래 이미지 클릭\
 [![Video](./readmeImg/youtube.png)](https://youtu.be/P2ChpiO9nnE)
 \
 \
@@ -42,14 +42,14 @@
 \
 \
 \
+\
 []()
 ### Foldering
 
- | Router | Etc |
+ | Module | Router |
 |:---:|:---:|
-| ![image](./readmeImg/foldering/router.png)|![image](./readmeImg/foldering/etc.png) |
-
-
+| <img src="./readmeImg/foldering/etc.png" width="70%"/> | <img src="./readmeImg/foldering/router.png" width="45%"/> |
+\
 \
 \
 \
@@ -88,6 +88,7 @@ Database로 MongoDB와 AWS의 S3를 사용했다.
 }
 ```
 Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request-promise(request dependency에 의존적)를 사용했다.
+\
 \
 \
 \
