@@ -27,13 +27,13 @@
 \
 []()
 ### API Description
-[API 명세서 링크](https://github.com/SOLscript/SOLscript_server/wiki)
+* [API 명세서 링크](https://github.com/SOLscript/SOLscript_server/wiki)
 \
 \
 \
 []()
 ### Usage Video
-아래 이미지 클릭\
+* 아래 이미지 클릭\
 [![Video](./readmeImg/youtube.png)](https://youtu.be/P2ChpiO9nnE)
 \
 []()
@@ -170,7 +170,7 @@ SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 �
 
  | MainActivity | MyPageActivity | CardInfoActivity |
 |:---:|:---:|:---:|
-| ![image](./readmeImg/capture/MainActivity.png)|![image](./readmeImg/capture/MypageActivity.png) |![image](./readmeImg/capture/CardInfoActivity.png) |
+| ![image](./readmeImg/capture/MainActivity.png)|![image](./readmeImg/capture/MyPageActivity.png) |![image](./readmeImg/capture/CardInfoActivity.png) |
 
 | CardActivity | CardRegisterActivity | ChatActivity |
 |:---:|:---:|:---:|
