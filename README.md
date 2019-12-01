@@ -4,7 +4,7 @@
 
 밀레니엄 세대를 중심으로 **구독 경제**가 일상에 깊숙이 자리 잡고 있다. 구독 경제(subscription economy)란 소비자가 정기적으로 비용을 지급하여 원하는 상품을 배송받거나, 일정 기간 서비스를 이용하는 것을 뜻한다.
 
- 현재 구독 경제는 2020년 594조 원 전망을 나타내며 소비의 새로운 패러다임으로 자리 잡았다. 하지만 서비스를 구매하던 기존의 방식이 익숙한 소비자들은 여전히 제한적인 서비스만을 이용하거나, 다양한 결재체계로 흩어져 구독 중인 서비스로 인해 관리에 어려움을 겪고 있다. 따라서 우리 팀은 신한 계열사들의 API들을(목록 아래 기제) 사용하여서 통합적으로 구독 서비스를 관리할 수 있는 플랫폼을 만들고자 한다.\
+ 현재 구독 경제는 2020년 594조 원 전망을 나타내며 소비의 새로운 패러다임으로 자리 잡았다. 하지만 서비스를 구매하던 기존의 방식이 익숙한 소비자들은 여전히 제한적인 서비스만을 이용하거나, 다양한 결재체계로 흩어져 구독 중인 서비스로 인해 관리에 어려움을 겪고 있다. 따라서 우리 팀은 신한 계열사들의 API들을(목록 아래 기제) 사용하여서 통합적으로 구독 서비스를 관리할 수 있는 플랫폼을 만들고자 한다.
 \
 \
 \
@@ -18,10 +18,10 @@
 \
 \
 \
-\
 []()
 # Usage Video
-https://drive.google.com/drive/folders/1Y-TnhOSvX0GOw-QpAYguQ8f8Mc4y0hNJ
+아래 이미지 클릭
+[![Video](./readmeImg/youtube.png)](https://youtu.be/P2ChpiO9nnE)
 \
 \
 \
@@ -93,11 +93,9 @@ Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request
 \
 \
 \
-\
 []()
 # Core Technology
-### **Dialogflow**
-
+**Dialogflow**\
 SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 후 유저에게 맞춤형 구독 서비스를 추천해준다. 취향 분석은 Price, Category, Feel 총 3가지의 기준으로 분석하며, 유저가 정형화되지 않은 답변을 하더라도 챗봇이 해당 발화의 Entity를 추출하여 준비된 키워드에 맵핑시킨다. 또한 사용자의 구독 서비스 현황이나, 자주 사용하는 구독 서비스 현황 등에 대한 질문을 Database접근 및 내부 로직을 통해 답변할 수 있다. 
 
 [참고자료: Dialogflow Reference](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.sessions/detectIntent)
@@ -105,7 +103,7 @@ SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 �
 \
 \
 []()
-### **Shinhan API**
+**Shinhan API**\
 신한은행 및 카드 API를 사용해서 카드를 등록해서 간편하게 구독 서비스를 관리할 수 있도록 기능을 제공하였고, 유저의 카드 사용내역을 조회 및 파싱하여 사용자의 구독 서비스 사용패턴을 분석한 후 제공하였다.
 \
 \
@@ -113,7 +111,7 @@ SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 �
 \
 []()
 # Application Lifecycle Management
-## Agile
+### Agile
 
 **1. 팀원과의 기술스택을 맞춘다.**
 \
@@ -131,6 +129,7 @@ SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 �
 \
 \
 [해커톤 후기: 윤자이 기술블로그](https://ooeunz.tistory.com/59)
+\
 \
 \
 \
