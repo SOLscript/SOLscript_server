@@ -24,9 +24,12 @@
 * 📚 스크린 타임 조회를 통해 이전 달과의 사용률을 비교한 통계 제공.
 \
 \
+\
 []()
 ### API Description
 * [API 명세서 링크](https://github.com/SOLscript/SOLscript_server/wiki)
+\
+\
 \
 \
 []()
