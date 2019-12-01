@@ -26,27 +26,6 @@ https://drive.google.com/drive/folders/1Y-TnhOSvX0GOw-QpAYguQ8f8Mc4y0hNJ
 \
 \
 []()
- # Application Image
-
- | MainActivity | MyPageActivity | CardInfoActivity |
-|:---:|:---:|:---:|
-| ![image](./readmeImg/capture/MainActivity.png)|![image](./readmeImg/capture/MypageActivity.png) |![image](./readmeImg/capture/CardInfoActivity.png) |
-
-| CardActivity | CardRegisterActivity | ChatActivity |
-|:---:|:---:|:---:|
-| ![image](./readmeImg/capture/CardActivity.png)| ![image](./readmeImg/capture/CardRegisterActivity.png) |![image](./readmeImg/capture/ChatActivity.png) |
-
-| SubscriptCalenderFragment | SubscriptCalenderFragment | SubscriptManageFragment |
-|:---:|:---:|:---:|
-|![image](./readmeImg/capture/SubscriptCalenderFragment.png)|![image](./readmeImg/capture/SubscriptCalenderFragment-2.png)|![image](./readmeImg/capture/SubscriptCalenderFragment-3.png) |
-
-| AnalysisActivity | CategoryFragment | DetailedActivity | CategoryContentFragment |
-|:---:|:---:|:---:|:---:|
-|![image](./readmeImg/capture/AnalysisActivity.png)|![image](./readmeImg/capture/CategoryFragment.png)|![image](./readmeImg/capture/DetailedActivity.png) |![image](./readmeImg/capture/CategoryContentFragment.png)
-\
-\
-\
-[]()
 # Design Pattern
 ### Strategy Pattern
 * 행위를 클래스로 캡슐화해 동적으로 행위를 자유롭게 바꿀 수 있게 해주는 패턴.
@@ -152,3 +131,24 @@ SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 �
 \
 \
 [해커톤 후기: 윤자이 기술블로그](https://ooeunz.tistory.com/59)
+\
+\
+\
+[]()
+ # Application Image
+
+ | MainActivity | MyPageActivity | CardInfoActivity |
+|:---:|:---:|:---:|
+| ![image](./readmeImg/capture/MainActivity.png)|![image](./readmeImg/capture/MypageActivity.png) |![image](./readmeImg/capture/CardInfoActivity.png) |
+
+| CardActivity | CardRegisterActivity | ChatActivity |
+|:---:|:---:|:---:|
+| ![image](./readmeImg/capture/CardActivity.png)| ![image](./readmeImg/capture/CardRegisterActivity.png) |![image](./readmeImg/capture/ChatActivity.png) |
+
+| SubscriptCalenderFragment | SubscriptCalenderFragment | SubscriptManageFragment |
+|:---:|:---:|:---:|
+|![image](./readmeImg/capture/SubscriptCalenderFragment.png)|![image](./readmeImg/capture/SubscriptCalenderFragment-2.png)|![image](./readmeImg/capture/SubscriptCalenderFragment-3.png) |
+
+| AnalysisActivity | CategoryFragment | DetailedActivity | CategoryContentFragment |
+|:---:|:---:|:---:|:---:|
+|![image](./readmeImg/capture/AnalysisActivity.png)|![image](./readmeImg/capture/CategoryFragment.png)|![image](./readmeImg/capture/DetailedActivity.png) |![image](./readmeImg/capture/CategoryContentFragment.png)
