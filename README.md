@@ -15,28 +15,31 @@
 \
 \
 []()
-# Features
+# Info
+### Features
 * 📡 신한그룹 API를 사용하여 계좌, 카드 등록후 구독 간편화.
 * 📦 신한그룹 API를 사용하여 유저의 구독 서비스 자동 추출.
 * 💬 챗봇과 대화를 통한 사용자의 취향 분석.
 * 📝 유저의 구독 서비스 사용패턴 분석.
 * 📚 스크린 타임 조회를 통해 이전 달과의 사용률을 비교한 통계 제공.
 \
-[]()
----
-\
-\
 \
 \
 []()
-# Usage Video
+### API Description
+[API 명세서 링크](https://github.com/SOLscript/SOLscript_server/wiki)
+\
+\
+\
+[]()
+### Usage Video
 아래 이미지 클릭\
 [![Video](./readmeImg/youtube.png)](https://youtu.be/P2ChpiO9nnE)
-
 \
 []()
 
 ---
+\
 \
 \
 \
@@ -55,11 +58,15 @@
 ![image](./readmeImg/strategy-pattern.png)
 [참고 URL](https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html)
 \
+[]()
+
+---
+\
 \
 \
 \
 []()
-### Foldering
+# Foldering
 
  | Module | Router |
 |:---:|:---:|
