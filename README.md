@@ -36,11 +36,9 @@
 특히 게임 프로그래밍에서 게임 캐릭터가 자신이 처한 상황에 따라 공격이나 행동하는 방식을 바꾸고 싶을 때 스트래티지 패턴은 매우 유용하다.\
 \
 \
-[참고 URL](https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html)
-\
-\
 []()
 ![image](./readmeImg/strategy-pattern.png)
+[참고 URL](https://gmlwjd9405.github.io/2018/07/06/strategy-pattern.html)
 \
 \
 \
@@ -65,7 +63,8 @@
     "actions-on-google": "^2.12.0"
   }
 ```
-NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용해서 SOLscript서버를 proxy server로 이용 및, webhook을 이용해 fulfillment처리를 하였다.\
+NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용해서 SOLscript서버를 proxy server로 이용 및, webhook을 이용해 fulfillment처리를 하였다.
+\
 \
 \
 []()
@@ -78,8 +77,7 @@ NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용�
 }
 ```
 Database로 MongoDB와 AWS의 S3를 사용했다.
-
-[참고자료(공식 홈페이지)](https://square.github.io/retrofit/)
+\
 \
 \
 []()
