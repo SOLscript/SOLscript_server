@@ -38,7 +38,7 @@
 \
 []()
 ## Design Pattern
-**Strategy Pattern**
+> Strategy Pattern
 * 행위를 클래스로 캡슐화해 동적으로 행위를 자유롭게 바꿀 수 있게 해주는 패턴.
 * 같은 문제를 해결하는 여러 알고리즘이 클래스별로 캡슐화되어 있고 이들이 필요할 때 교체할 수 있도록 함으로써 동일한 문제를 다른 알고리즘으로 해결할 수 있게 하는 디자인 패턴.
 * 즉, 전략을 쉽게 바꿀 수 있도록 해주는 디자인 패턴이다.
@@ -112,13 +112,13 @@ Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request
 \
 []()
 ## Core Technology
-**Dialogflow**\
+> Dialogflow
 SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 후 유저에게 맞춤형 구독 서비스를 추천해준다. 취향 분석은 Price, Category, Feel 총 3가지의 기준으로 분석하며, 유저가 정형화되지 않은 답변을 하더라도 챗봇이 해당 발화의 Entity를 추출하여 준비된 키워드에 맵핑시킨다. 또한 사용자의 구독 서비스 현황이나, 자주 사용하는 구독 서비스 현황 등에 대한 질문을 Database접근 및 내부 로직을 통해 답변할 수 있다. 
 [참고자료: Dialogflow Reference](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.sessions/detectIntent)
 
 \
 []()
-**Shinhan API**\
+> Shinhan API
 신한은행 및 카드 API를 사용해서 카드를 등록해서 간편하게 구독 서비스를 관리할 수 있도록 기능을 제공하였고, 유저의 카드 사용내역을 조회 및 파싱하여 사용자의 구독 서비스 사용패턴을 분석한 후 제공하였다.
 \
 \
