@@ -83,7 +83,6 @@
 > NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용해서 SOLscript서버를 proxy server로 이용 및, webhook을 이용해 fulfillment처리를 하였다.
 
 \
-\
 []()
 ```json
 "dependencies": {
@@ -96,7 +95,6 @@
 > Database로 MongoDB와 AWS의 S3를 사용했다.
 
 \
-\
 []()
 ```json
 "dependencies": {
@@ -106,7 +104,6 @@
 ```
 > Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request-promise(request dependency에 의존적)를 사용했다.
 
-\
 \
 []()
 
