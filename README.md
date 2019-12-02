@@ -80,7 +80,7 @@
     "actions-on-google": "^2.12.0"
   }
 ```
-NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용해서 SOLscript서버를 proxy server로 이용 및, webhook을 이용해 fulfillment처리를 하였다.
+> NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용해서 SOLscript서버를 proxy server로 이용 및, webhook을 이용해 fulfillment처리를 하였다.
 \
 \
 []()
@@ -92,7 +92,7 @@ NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용�
     "mongoose": "^5.7.12"
 }
 ```
-Database로 MongoDB와 AWS의 S3를 사용했다.
+> Database로 MongoDB와 AWS의 S3를 사용했다.
 \
 \
 []()
@@ -102,7 +102,7 @@ Database로 MongoDB와 AWS의 S3를 사용했다.
     "request-promise": "^4.2.5"
 }
 ```
-Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request-promise(request dependency에 의존적)를 사용했다.
+> Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request-promise(request dependency에 의존적)를 사용했다.
 \
 \
 []()
@@ -112,14 +112,14 @@ Shinhan Bank, Shinhan Card API를 비동기적으로 사용하기 위해 request
 \
 []()
 ## Core Technology
-> Dialogflow
-SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 후 유저에게 맞춤형 구독 서비스를 추천해준다. 취향 분석은 Price, Category, Feel 총 3가지의 기준으로 분석하며, 유저가 정형화되지 않은 답변을 하더라도 챗봇이 해당 발화의 Entity를 추출하여 준비된 키워드에 맵핑시킨다. 또한 사용자의 구독 서비스 현황이나, 자주 사용하는 구독 서비스 현황 등에 대한 질문을 Database접근 및 내부 로직을 통해 답변할 수 있다. 
+**Dialogflow**
+> SOLscript는 챗봇 soly와의 대화를 통해 유저의 취향을 분석한 후 유저에게 맞춤형 구독 서비스를 추천해준다. 취향 분석은 Price, Category, Feel 총 3가지의 기준으로 분석하며, 유저가 정형화되지 않은 답변을 하더라도 챗봇이 해당 발화의 Entity를 추출하여 준비된 키워드에 맵핑시킨다. 또한 사용자의 구독 서비스 현황이나, 자주 사용하는 구독 서비스 현황 등에 대한 질문을 Database접근 및 내부 로직을 통해 답변할 수 있다. 
 [참고자료: Dialogflow Reference](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects.agent.sessions/detectIntent)
 
 \
 []()
-> Shinhan API
-신한은행 및 카드 API를 사용해서 카드를 등록해서 간편하게 구독 서비스를 관리할 수 있도록 기능을 제공하였고, 유저의 카드 사용내역을 조회 및 파싱하여 사용자의 구독 서비스 사용패턴을 분석한 후 제공하였다.
+**Shinhan API**
+> 신한은행 및 카드 API를 사용해서 카드를 등록해서 간편하게 구독 서비스를 관리할 수 있도록 기능을 제공하였고, 유저의 카드 사용내역을 조회 및 파싱하여 사용자의 구독 서비스 사용패턴을 분석한 후 제공하였다.
 \
 \
 []()
