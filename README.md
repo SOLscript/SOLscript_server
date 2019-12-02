@@ -73,7 +73,7 @@
 []()
 ## Usage Package
 
-``` 
+```json
 "dependencies": {
     "dialogflow": "^0.14.1",
     "dialogflow-fulfillment": "^0.6.1",
@@ -84,7 +84,7 @@ NLP Model로 Google Dialogflow를 사용했고, Google Client Library를 사용�
 \
 \
 []()
-```
+```json
 "dependencies": {
     "aws-sdk": "^2.575.0",
     "multer": "^1.4.2",
@@ -96,7 +96,7 @@ Database로 MongoDB와 AWS의 S3를 사용했다.
 \
 \
 []()
-```
+```json
 "dependencies": {
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
